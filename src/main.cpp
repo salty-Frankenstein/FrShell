@@ -3,9 +3,10 @@
 #include"cmdparser.h"
 using namespace std;
 int main(){
-	Shell s;
 	CmdParser cp;
+	Shell s(&cp);
 	s.Run();
+	cp.Parse("abd");
 	cout<<"good"<<endl;
 	return 0;
 }

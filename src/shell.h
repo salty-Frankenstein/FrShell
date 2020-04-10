@@ -8,6 +8,7 @@
 
 class Shell{
 public:
+	Shell(CmdParser* hdl);
 	void Run();
 	std::string GetCommand();
 	bool Execute(Command* msg);
