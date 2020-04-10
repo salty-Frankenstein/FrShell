@@ -1,8 +1,9 @@
 #include"cmdparser.h"
 using namespace std;
 
-Command* CmdParser::Parse(string str){
+CommandSptr CmdParser::Parse(string str){
 	cout<<"cmd parse"<<endl;
+	return CommandSptr(make_shared<CmdCp>());
 	return nullptr;
 }
 

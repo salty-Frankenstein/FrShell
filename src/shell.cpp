@@ -1,14 +1,13 @@
 #include"shell.h"
 using namespace std;
 
-Shell::Shell(CmdParser* hdl)
-	: cmdPsrHdl(hdl) {}
+Shell::Shell(CmdParser& hdl)
+	: cmdPsrHdl(&hdl) {}
 
 void Shell::Run(){
 	while(true){
 		cout << "$ ";
-		cmdPsrHdl->Parse(GetCommand());
-		//cmdPsrHdl->Parse(GetCommand());
+		cmdPsrHdl->Parse(GetCommand())->Execute();
 	}
 }
 

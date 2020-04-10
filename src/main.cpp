@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
 	CmdParser cp;
-	Shell s(&cp);
+	Shell s(cp);
 	s.Run();
 	cp.Parse("abd");
 	cout<<"good"<<endl;

@@ -8,10 +8,10 @@
 
 class Shell{
 public:
-	Shell(CmdParser* hdl);
+	Shell(CmdParser& hdl);
 	void Run();
 	std::string GetCommand();
-	bool Execute(Command* msg);
+	//bool Execute(CommandSptr msg);
 private:
 	CmdParser* cmdPsrHdl;
 };
