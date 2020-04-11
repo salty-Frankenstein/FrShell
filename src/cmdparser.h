@@ -4,6 +4,7 @@
 #include"command.h"
 #include"cmd_cp.h"
 #include<iostream>
+#include<sstream>
 #include<string>
 #include<memory>
 

@@ -4,12 +4,15 @@
 #include<list>
 #include<string>
 
+typedef std::list<std::string> StrList;
+
 class Command{
 public:
+	Command(StrList opt, StrList para);
 	virtual bool Execute() = 0;
 protected:
-	std::list<std::string> option;
-	std::list<std::string> parameter;
+	StrList option;
+	StrList parameter;
 };
 
 #endif	//COMMAND_H
