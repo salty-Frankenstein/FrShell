@@ -16,5 +16,5 @@ private:
 	CmdParser* cmdPsrHdl;
 };
 
-#endif	//SHELL_H
+#endif	//!SHELL_H
 

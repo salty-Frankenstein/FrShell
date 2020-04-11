@@ -10,5 +10,5 @@ public:
 	bool Execute();
 };
 
-#endif //CMD_CP_H
+#endif //!CMD_CP_H
 

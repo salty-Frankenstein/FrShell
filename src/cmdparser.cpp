@@ -46,7 +46,7 @@ CommandSptr CmdParser::Parse(string str){
 	case CMD_CP:
 		return CommandSptr(make_shared<CmdCp>(opt, para));
 	case CMD_CMP:
-		//return CommandSptr(make_shared<CmdCp>(opt, para));
+		return CommandSptr(make_shared<CmdCmp>(opt, para));
 	case CMD_WC:
 		//return CommandSptr(make_shared<CmdCp>(opt, para));
 	case CMD_CAT:

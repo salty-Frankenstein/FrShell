@@ -2,7 +2,7 @@
 #define CMDPARSER_H
 
 #include"command.h"
-#include"cmd_cp.h"
+#include"all_commands.h"
 #include<iostream>
 #include<sstream>
 #include<string>
@@ -23,5 +23,5 @@ private:
 };
 
 
-#endif	//CMDPARSER_H
+#endif	//!CMDPARSER_H
 

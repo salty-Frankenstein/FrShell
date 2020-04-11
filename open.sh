@@ -5,6 +5,6 @@ vim main.cpp \
 	cmdparser.cpp cmdparser.h \
 	command.h command.cpp \
 	cmd_cp.h cmd_cp.cpp \
-
+	cmd_cmp.h cmd_cmp.cpp
 
 cd ..
