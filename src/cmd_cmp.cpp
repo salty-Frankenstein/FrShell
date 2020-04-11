@@ -10,7 +10,7 @@ bool CmdCmp::Execute(){
 		cout << "Try 'cmp -- help' for more information." << endl;
 		return false;
 	}
-	//TODO: directory cases
+//TODO: directory cases
 	if(parameter.size() < 2){
 		cout << "error" << endl;
 		return false;
