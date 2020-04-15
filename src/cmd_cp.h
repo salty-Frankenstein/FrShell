@@ -1,6 +1,7 @@
 #ifndef CMD_CP_H
 #define CMD_CP_H
 #include"command.h"
+#include"directory.h"
 #include<iostream>
 #include<fstream>
 

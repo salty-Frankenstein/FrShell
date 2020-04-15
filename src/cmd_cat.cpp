@@ -1,6 +1,6 @@
 #include"cmd_cat.h"
 using namespace std;
-
+using namespace DirUtils;
 CmdCat::CmdCat(StrList opt, StrList para)
 	: Command(opt, para) {}
 
@@ -17,6 +17,10 @@ bool CmdCat::Execute(){
 	}
 
 	for(auto i = parameter.begin(); i != parameter.end(); i++){
+		if(GetFileType(*i) == DU_DIRECTORY){
+			cout << "cat: " << (*i) << ": Is a directory" << endl;
+			continue;
+		}
 		ifstream fin((*i).c_str(), ios::binary);
 		if(!fin.is_open()){
 			cout << "cat: " << (*i) << ": No such file or directory" << endl;

@@ -40,3 +40,8 @@ StrList DirUtils::GetDirFiles(const string& p){
 	return sl;
 }
 
+bool DirUtils::IsExist(const string& p){
+	string s;
+	return AbsPath(p, s);
+}
+

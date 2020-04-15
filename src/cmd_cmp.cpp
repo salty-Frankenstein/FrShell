@@ -1,5 +1,6 @@
 #include"cmd_cmp.h"
 using namespace std;
+using namespace DirUtils;
 
 CmdCmp::CmdCmp(StrList opt, StrList para)
 	: Command(opt, para){}
@@ -10,7 +11,6 @@ bool CmdCmp::Execute(){
 		cout << "Try 'cmp -- help' for more information." << endl;
 		return false;
 	}
-//TODO: directory cases
 	if(parameter.size() < 2){
 		cout << "error" << endl;
 		return false;
@@ -20,6 +20,15 @@ bool CmdCmp::Execute(){
 	fileName1 = (*i);
 	i++;
 	fileName2 = (*i);
+
+	if(GetFileType(fileName1) == DU_DIRECTORY){
+		cout << "cmp: " << fileName1 << ": Is a directory" << endl;
+		return false;
+	}
+	if(GetFileType(fileName2) == DU_DIRECTORY){
+		cout << "cmp: " << fileName2 << ": Is a directory" << endl;
+		return false;
+	}
 	/* input file */
 	ifstream file1(fileName1.c_str(), ios::binary),
 		file2(fileName2.c_str(), ios::binary);

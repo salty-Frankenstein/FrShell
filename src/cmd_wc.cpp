@@ -1,5 +1,6 @@
 #include"cmd_wc.h"
 using namespace std;
+using namespace DirUtils;
 
 CmdWc::CmdWc(StrList opt, StrList para)
 	: Command(opt, para) {}
@@ -28,6 +29,11 @@ bool CmdWc::Execute(){
 	int byteTotal = 0, wordTotal = 0, lineTotal = 0;
 	for(auto i = parameter.begin(); i != parameter.end(); i++){
 		int t;
+		if(GetFileType(*i) == DU_DIRECTORY){
+			cout << "wc: " + (*i) + ": Is a directory" << endl;
+			cout << "0 0 0 " + (*i) << endl;
+			continue;
+		}
 		ifstream fin((*i).c_str(), ios::binary);
 		if(!fin.is_open()){
 			cout << "wc: " + (*i) + ": No such file or directory" << endl;

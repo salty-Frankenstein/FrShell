@@ -2,6 +2,7 @@
 #define CMD_CMP_H
 
 #include"command.h"
+#include"directory.h"
 #include<iostream>
 #include<fstream>
 

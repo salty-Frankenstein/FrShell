@@ -15,6 +15,7 @@ namespace DirUtils{
 	enum FileType { DU_FILE, DU_DIRECTORY, DU_OTHER, DU_NULL };
 	bool AbsPath(const std::string& pathIn, std::string& pathOut);
 	bool IsSameDir(const std::string& path1,const std::string& path2);
+	bool IsExist(const std::string& path);
 	FileType GetFileType(const std::string& path);
 	StrList GetDirFiles(const std::string& path);
 }

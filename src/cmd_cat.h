@@ -2,6 +2,7 @@
 #define CMD_CAT_H
 
 #include"command.h"
+#include"directory.h"
 #include<iostream>
 #include<fstream>
 
