@@ -8,5 +8,6 @@ vim main.cpp \
 	cmd_cp.h cmd_cp.cpp \
 	cmd_cmp.h cmd_cmp.cpp \
 	cmd_cat.h cmd_cat.cpp \
-	cmd_wc.h cmd_wc.cpp
+	cmd_wc.h cmd_wc.cpp \
+	directory.h directory.cpp
 cd ..

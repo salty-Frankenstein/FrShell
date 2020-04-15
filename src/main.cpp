@@ -7,6 +7,5 @@ int main(){
 	Shell s(cp);
 	s.Run();
 	cp.Parse("abd");
-	cout<<"good"<<endl;
 	return 0;
 }

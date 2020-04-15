@@ -14,6 +14,11 @@ bool CmdCp::Execute(){
 	fileFrom = (*i);
 	i++;
 	fileTo = (*i);
+	//TODO
+	if(fileFrom == fileTo){
+		cout << "cp: '" << fileFrom << "' and '" << fileTo << "' ";
+		return false;
+	}
 	/* input file */
 	ifstream fin(fileFrom.c_str(), ios::binary);
 	if(!fin.is_open()){
