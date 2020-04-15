@@ -25,7 +25,7 @@ CommandSptr CmdParser::Parse(string str){
 			opt.push_back(t);
 		else para.push_back(t);
 	}
-	
+	/*	
 	cout << "now parsing:";
 	cout << "(cmd " << cmd << ") ";
 	cout << "(opt ";
@@ -37,7 +37,7 @@ CommandSptr CmdParser::Parse(string str){
 	for(auto i = para.begin(); i != para.end(); i++)
 		cout << "(file " << (*i) << ')';
 	cout<<")\n";
-
+	*/
 
 	switch(commandMap[cmd]){
 	case CMD_INVA:
@@ -48,7 +48,7 @@ CommandSptr CmdParser::Parse(string str){
 	case CMD_CMP:
 		return CommandSptr(make_shared<CmdCmp>(opt, para));
 	case CMD_WC:
-		//return CommandSptr(make_shared<CmdCp>(opt, para));
+		return CommandSptr(make_shared<CmdWc>(opt, para));
 	case CMD_CAT:
 		return CommandSptr(make_shared<CmdCat>(opt, para));
 	case CMD_MAN:

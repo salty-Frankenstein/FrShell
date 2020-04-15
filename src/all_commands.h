@@ -4,6 +4,7 @@
 #include"cmd_cp.h"
 #include"cmd_cmp.h"
 #include"cmd_cat.h"
+#include"cmd_wc.h"
 
 #endif //!ALL_COMMANDS_H
 

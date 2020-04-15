@@ -7,5 +7,6 @@ vim main.cpp \
 	all_commands.h \
 	cmd_cp.h cmd_cp.cpp \
 	cmd_cmp.h cmd_cmp.cpp \
-	cmd_cat.h cmd_cat.cpp
+	cmd_cat.h cmd_cat.cpp \
+	cmd_wc.h cmd_wc.cpp
 cd ..
