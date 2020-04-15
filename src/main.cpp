@@ -6,6 +6,5 @@ int main(){
 	CmdParser cp;
 	Shell s(cp);
 	s.Run();
-	cp.Parse("abd");
 	return 0;
 }

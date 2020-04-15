@@ -7,7 +7,9 @@ Shell::Shell(CmdParser& hdl)
 void Shell::Run(){
 	while(true){
 		cout << "$ ";
-		auto cmd = cmdPsrHdl->Parse(GetCommand());
+		auto s = GetCommand();
+		if(s == "exit")break;
+		auto cmd = cmdPsrHdl->Parse(s);
 		if(cmd != nullptr)cmd->Execute();
 	}
 }
