@@ -6,6 +6,7 @@
 #include"cmd_cat.h"
 #include"cmd_wc.h"
 #include"cmd_sh.h"
+#include"cmd_man.h"
 
 #endif //!ALL_COMMANDS_H
 

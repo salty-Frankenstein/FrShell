@@ -10,5 +10,6 @@ vim main.cpp \
 	cmd_cat.h cmd_cat.cpp \
 	cmd_wc.h cmd_wc.cpp \
 	directory.h directory.cpp \
-	cmd_sh.h cmd_sh.cpp 
+	cmd_sh.h cmd_sh.cpp \
+	cmd_man.h cmd_man.cpp
 cd ..

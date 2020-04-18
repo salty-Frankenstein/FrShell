@@ -10,11 +10,11 @@
 
 class Shell{
 public:
-	Shell(CmdParser& hdl);
+	Shell();
 	void Run();
 	std::string GetCommand();
 private:
-	CmdParser* cmdPsrHdl;
+	CmdParser cmdPsr;
 	char path[PATH_MAX];
 };
 

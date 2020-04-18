@@ -1,8 +1,7 @@
 #include"shell.h"
 using namespace std;
 
-Shell::Shell(CmdParser& hdl)
-	: cmdPsrHdl(&hdl) {
+Shell::Shell(){
 	getcwd(path, PATH_MAX);
 }
 
@@ -12,7 +11,7 @@ void Shell::Run(){
 		cout << "$ ";
 		auto s = GetCommand();
 		if(s == "exit")break;
-		auto cmd = cmdPsrHdl->Parse(s);
+		auto cmd = cmdPsr.Parse(s);
 		if(cmd != nullptr)cmd->Execute();
 	}
 }

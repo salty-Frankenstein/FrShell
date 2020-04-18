@@ -41,7 +41,8 @@ bool CmdCp::Execute(){
 		if(rActive){
 			/* copy a directory to a file */
 			if(GetFileType(fileTo) == DU_FILE){
-				cout << "cp: cannot overwrite non-directory '" << fileTo << "' with directory " << fileFrom << endl;
+				cout << "cp: cannot overwrite non-directory '" 
+				<< fileTo << "' with directory " << fileFrom << endl;
 				return false;
 			}
 			else{
@@ -57,7 +58,9 @@ bool CmdCp::Execute(){
 				
 				/* same directory */
 				if(absFrom == absTo){
-					cout << "cp: '" << fileFrom << "' and '" << fileTo + '/' + GetLastPath(absFrom) << "' are the same file" << endl;
+					cout << "cp: '" << fileFrom << "' and '" 
+					<< fileTo + '/' + GetLastPath(absFrom) 
+					<< "' are the same file" << endl;
 					return false;
 				}
 				else{
@@ -81,7 +84,7 @@ bool CmdCp::CopyDirectory(string fileFrom, string fileTo){
 	for(auto i = l.begin(); i != l.end(); i++){
 		auto nextFileFrom = fileFrom + '/' + *i;
 		auto nextFileTo = fileTo + '/' + *i;
-		if(GetFileType(fileFrom + '/' + *i) == DU_FILE){
+		if(GetFileType(nextFileFrom) == DU_FILE){
 			CopyFile(nextFileFrom, nextFileTo);
 		}
 		else{	/* recursion */
