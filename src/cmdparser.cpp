@@ -10,6 +10,7 @@ map<string, CommandType> CmdParser::commandMap = {
 };
 
 CommandSptr CmdParser::Parse(string str){
+	if(str.empty())return nullptr;
 	//cout<<"cmd parse"<<endl;
 	stringstream ss(str);
 	string cmd;

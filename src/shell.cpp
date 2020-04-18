@@ -2,10 +2,13 @@
 using namespace std;
 
 Shell::Shell(CmdParser& hdl)
-	: cmdPsrHdl(&hdl) {}
+	: cmdPsrHdl(&hdl) {
+	getcwd(path, PATH_MAX);
+}
 
 void Shell::Run(){
 	while(true){
+		cout << path;
 		cout << "$ ";
 		auto s = GetCommand();
 		if(s == "exit")break;

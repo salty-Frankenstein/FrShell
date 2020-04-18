@@ -3,6 +3,8 @@
 
 #include<string>
 #include<iostream>
+#include<unistd.h>
+#include<limits.h>
 #include"cmdparser.h"
 #include"command.h"
 
@@ -11,9 +13,9 @@ public:
 	Shell(CmdParser& hdl);
 	void Run();
 	std::string GetCommand();
-	//bool Execute(CommandSptr msg);
 private:
 	CmdParser* cmdPsrHdl;
+	char path[PATH_MAX];
 };
 
 #endif	//!SHELL_H
