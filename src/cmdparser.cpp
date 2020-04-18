@@ -1,4 +1,5 @@
 #include"cmdparser.h"
+#include"all_commands.h"
 using namespace std;
 
 map<string, CommandType> CmdParser::commandMap = {
@@ -6,7 +7,8 @@ map<string, CommandType> CmdParser::commandMap = {
 	{"cmp", CMD_CMP},
 	{"wc", CMD_WC},
 	{"cat", CMD_CAT},
-	{"man", CMD_MAN}
+	{"man", CMD_MAN},
+	{"sh", CMD_SH}
 };
 
 CommandSptr CmdParser::Parse(string str){
@@ -55,6 +57,8 @@ CommandSptr CmdParser::Parse(string str){
 	case CMD_MAN:
 		//return CommandSptr(make_shared<CmdCp>(opt, para));
 		;
+	case CMD_SH:
+		return CommandSptr(make_shared<CmdSh>(opt, para));
 	}
 	return nullptr;
 }
