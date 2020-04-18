@@ -45,3 +45,17 @@ bool DirUtils::IsExist(const string& p){
 	return AbsPath(p, s);
 }
 
+void DirUtils::MakeDirectory(const string& p){
+	if(access(p.c_str(), 0) != 0)
+		mkdir(p.c_str(), S_IRWXU);
+}
+
+string DirUtils::GetLastPath(const string& p){
+	int l = p.length();
+	for(int i = l - 1; i >= 0; i--){
+		if(p[i] == '/')
+			return p.substr(i + 1, l - i - 1);
+	}
+	return p;
+}
+

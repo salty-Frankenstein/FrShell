@@ -6,6 +6,7 @@
 #include<sys/stat.h>
 #include<dirent.h>
 #include<limits.h>
+#include<unistd.h>
 #include<cstdlib>
 #include<list>
 
@@ -18,6 +19,8 @@ namespace DirUtils{
 	bool IsExist(const std::string& path);
 	FileType GetFileType(const std::string& path);
 	StrList GetDirFiles(const std::string& path);
+	void MakeDirectory(const std::string& path);
+	std::string GetLastPath(const std::string& path);
 }
 
 
