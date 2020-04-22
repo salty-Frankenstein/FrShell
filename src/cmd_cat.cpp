@@ -5,14 +5,14 @@ CmdCat::CmdCat(StrList opt, StrList para)
 	: Command(opt, para) {}
 
 bool CmdCat::Execute(){
-	if(option.size() != 0){	//TODO: change error info into function
+	if(option.size() != 0){	
 		cout << "cat: invalid option -- '" << option.front() << "'" << endl;
 		cout << "Try 'cat -- help' for more information." << endl;
 		return false;
 	}
 	
-	if(parameter.size() <= 0){	//TODO
-		//cout << "error" << endl;
+	if(parameter.size() == 0){	
+		cout << "cat: too few arguments given" << endl;
 		return false;
 	}
 

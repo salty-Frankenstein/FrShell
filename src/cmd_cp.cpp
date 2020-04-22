@@ -7,7 +7,7 @@ CmdCp::CmdCp(StrList opt, StrList para)
 
 bool CmdCp::Execute(){
 	if(parameter.size() < 2){	//TODO: warnings
-		cout << "error"<<endl;
+		cout << "cp: too few arguments given" << endl;
 		return false;
 	}
 	
@@ -126,7 +126,6 @@ bool CmdCp::CopyFile(string fileFrom, string fileTo){
 	}
 	fin.close();
 	fout.close();
-	//cout << "Executing" << endl;
 	return true;
 }
 

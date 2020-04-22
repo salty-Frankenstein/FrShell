@@ -14,6 +14,7 @@ bool CmdSh::Execute(){
 	ifstream fin(fileName);
 	if(!fin.is_open()){
 		cout << "sh: cannot stat '" << fileName << "': No such fileName or directory" << endl;
+		return false;
 	}
 
 	while(!fin.eof()){

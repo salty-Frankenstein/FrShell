@@ -6,7 +6,7 @@ CmdCmp::CmdCmp(StrList opt, StrList para)
 	: Command(opt, para){}
 
 bool CmdCmp::Execute(){
-	if(option.size() != 0){	//TODO: change error info into function
+	if(option.size() != 0){	
 		cout << "cmp: invalid option -- '" << option.front() << "'" << endl;
 		cout << "Try 'cmp -- help' for more information." << endl;
 		return false;

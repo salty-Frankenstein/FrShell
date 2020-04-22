@@ -4,7 +4,6 @@ using namespace std;
 
 CommandSptr CmdParser::Parse(string str){
 	if(str.empty())return nullptr;
-	//cout<<"cmd parse"<<endl;
 	stringstream ss(str);
 	string cmd;
 	ss >> cmd;
@@ -19,19 +18,6 @@ CommandSptr CmdParser::Parse(string str){
 			opt.push_back(t);
 		else para.push_back(t);
 	}
-	/*	
-	cout << "now parsing:";
-	cout << "(cmd " << cmd << ") ";
-	cout << "(opt ";
-	for(auto i = opt.begin(); i != opt.end(); i++)
-		cout << "(" << (*i) << ')';
-	cout << ") ";
-
-	cout << "(para ";
-	for(auto i = para.begin(); i != para.end(); i++)
-		cout << "(file " << (*i) << ')';
-	cout<<")\n";
-	*/
 
 	switch(commandMap[cmd]){
 	case CMD_INVA:
